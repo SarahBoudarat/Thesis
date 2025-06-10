@@ -1,0 +1,131 @@
+user_id,prompt,response
+571,"Example:
+I have watched and liked the following movies: The Matrix, Inception, Fight Club.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ The Dark Knight, Memento, Interstellar, Se7en, The Prestige
+
+Example 2:
+I have watched and liked the following movies: Titanic, The Notebook, La La Land.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ A Walk to Remember, Me Before You, The Fault in Our Stars, About Time, Eternal Sunshine of the Spotless Mind
+
+Now for me:
+I have watched and liked the following movies: Tales from the Darkside: The Movie (1990), Plan 9 from Outer Space (1959), Children of the Corn (1984), Jaws 2 (1978), Wishmaster (1997), Kindred, The (1986), Fright Night Part II (1988), Friday the 13th Part 3: 3D (1982), Chopping Mall (a.k.a. Killbots) (1986), Funhouse, The (1981).
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.","→ Night of the Demons (1988), Sleepaway Camp (1983), The Gate (1987), House (1986), The Return of the Living Dead (1985)"
+491,"Example:
+I have watched and liked the following movies: The Matrix, Inception, Fight Club.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ The Dark Knight, Memento, Interstellar, Se7en, The Prestige
+
+Example 2:
+I have watched and liked the following movies: Titanic, The Notebook, La La Land.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ A Walk to Remember, Me Before You, The Fault in Our Stars, About Time, Eternal Sunshine of the Spotless Mind
+
+Now for me:
+I have watched and liked the following movies: Ted (2012), Marley & Me (2008), Santa Clause, The (1994), 50 First Dates (2004), Home Alone 2: Lost in New York (1992), Bridget Jones's Diary (2001), Wedding Crashers (2005), Simpsons Movie, The (2007), Bolt (2008), My Big Fat Greek Wedding (2002).
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.","→ The Hangover, Paul Blart: Mall Cop, The Proposal, Crazy, Stupid, Love, Knocked Up"
+386,"Example:
+I have watched and liked the following movies: The Matrix, Inception, Fight Club.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ The Dark Knight, Memento, Interstellar, Se7en, The Prestige
+
+Example 2:
+I have watched and liked the following movies: Titanic, The Notebook, La La Land.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ A Walk to Remember, Me Before You, The Fault in Our Stars, About Time, Eternal Sunshine of the Spotless Mind
+
+Now for me:
+I have watched and liked the following movies: Johnny Mnemonic (1995), Heat (1995), Clerks (1994), Last Action Hero (1993), Mission: Impossible (1996), Desperado (1995), Fargo (1996), Casino (1995), Copycat (1995), Independence Day (a.k.a. ID4) (1996).
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.","→ The Rock, True Lies, Grosse Pointe Blank, Executive Decision, The Long Kiss Goodnight"
+582,"Example:
+I have watched and liked the following movies: The Matrix, Inception, Fight Club.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ The Dark Knight, Memento, Interstellar, Se7en, The Prestige
+
+Example 2:
+I have watched and liked the following movies: Titanic, The Notebook, La La Land.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ A Walk to Remember, Me Before You, The Fault in Our Stars, About Time, Eternal Sunshine of the Spotless Mind
+
+Now for me:
+I have watched and liked the following movies: WALL·E (2008), Up (2009), Grand Budapest Hotel, The (2014), Departed, The (2006), Prestige, The (2006), Big Hero 6 (2014), Inglourious Basterds (2009), Harry Potter and the Half-Blood Prince (2009), Spirited Away (Sen to Chihiro no kamikakushi) (2001), Casino Royale (2006).
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.","→ Inside Out, Moonrise Kingdom, Shutter Island, The Grand Budapest Hotel, The Shape of Water"
+554,"Example:
+I have watched and liked the following movies: The Matrix, Inception, Fight Club.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ The Dark Knight, Memento, Interstellar, Se7en, The Prestige
+
+Example 2:
+I have watched and liked the following movies: Titanic, The Notebook, La La Land.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ A Walk to Remember, Me Before You, The Fault in Our Stars, About Time, Eternal Sunshine of the Spotless Mind
+
+Now for me:
+I have watched and liked the following movies: To Kill a Mockingbird (1962), Wizard of Oz, The (1939), All About Eve (1950), Six Degrees of Separation (1993), It's a Wonderful Life (1946), Goodfellas (1990), Broadcast News (1987), Three Colors: Blue (Trois couleurs: Bleu) (1993), Cool Hand Luke (1967), Boogie Nights (1997).
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.","→ Sunset Boulevard, Singin' in the Rain, Rear Window, The Apartment, Casino"
+31,"Example:
+I have watched and liked the following movies: The Matrix, Inception, Fight Club.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ The Dark Knight, Memento, Interstellar, Se7en, The Prestige
+
+Example 2:
+I have watched and liked the following movies: Titanic, The Notebook, La La Land.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ A Walk to Remember, Me Before You, The Fault in Our Stars, About Time, Eternal Sunshine of the Spotless Mind
+
+Now for me:
+I have watched and liked the following movies: Princess Bride, The (1987), Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981), Aliens (1986), Terminator, The (1984), Casablanca (1942), Alien (1979), Young Frankenstein (1974), Christmas Carol, A (1938), Groundhog Day (1993), Die Hard (1988).
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.","→ Back to the Future, The Goonies, Jurassic Park, The Princess Diaries, Ghostbusters"
+34,"Example:
+I have watched and liked the following movies: The Matrix, Inception, Fight Club.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ The Dark Knight, Memento, Interstellar, Se7en, The Prestige
+
+Example 2:
+I have watched and liked the following movies: Titanic, The Notebook, La La Land.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ A Walk to Remember, Me Before You, The Fault in Our Stars, About Time, Eternal Sunshine of the Spotless Mind
+
+Now for me:
+I have watched and liked the following movies: X-Men: The Last Stand (2006), Desperado (1995), Life Is Beautiful (La Vita è bella) (1997), Chinese Ghost Story, A (Sinnui yauwan) (1987), Mean Girls (2004), Princess Mononoke (Mononoke-hime) (1997), Taxi 2 (2000), Ninja Scroll (Jûbei ninpûchô) (1995), Terminator 2: Judgment Day (1991), Appleseed (Appurushîdo) (2004).
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.","→ Akira (1988), Oldboy (2003), The Fifth Element (1997), Battle Royale (2000), The Raid: Redemption (2011)"
+90,"Example:
+I have watched and liked the following movies: The Matrix, Inception, Fight Club.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ The Dark Knight, Memento, Interstellar, Se7en, The Prestige
+
+Example 2:
+I have watched and liked the following movies: Titanic, The Notebook, La La Land.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ A Walk to Remember, Me Before You, The Fault in Our Stars, About Time, Eternal Sunshine of the Spotless Mind
+
+Now for me:
+I have watched and liked the following movies: Shine (1996), Cemetery Man (Dellamorte Dellamore) (1994), Hamlet (1996), Flower of My Secret, The (La flor de mi secreto) (1995), It's My Party (1996), Swingers (1996), Crucible, The (1996), Twelfth Night (1996), Beautiful Thing (1996), Everyone Says I Love You (1996).
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.","→ Shakespeare in Love, Billy's Hollywood Screen Kiss, Trainspotting, The English Patient, My Own Private Idaho"
+264,"Example:
+I have watched and liked the following movies: The Matrix, Inception, Fight Club.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ The Dark Knight, Memento, Interstellar, Se7en, The Prestige
+
+Example 2:
+I have watched and liked the following movies: Titanic, The Notebook, La La Land.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ A Walk to Remember, Me Before You, The Fault in Our Stars, About Time, Eternal Sunshine of the Spotless Mind
+
+Now for me:
+I have watched and liked the following movies: Children of Dune (2003), Star Trek II: The Wrath of Khan (1982), Harry Potter and the Chamber of Secrets (2002), The Count of Monte Cristo (2002), The Diary of Anne Frank (1959), 101 Dalmatians (One Hundred and One Dalmatians) (1961), Sound of Music, The (1965), Gladiator (2000), Toy Story (1995), Forrest Gump (1994).
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.","→ The Princess Bride, Braveheart, Schindler's List, The Shawshank Redemption, Beauty and the Beast"
+223,"Example:
+I have watched and liked the following movies: The Matrix, Inception, Fight Club.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ The Dark Knight, Memento, Interstellar, Se7en, The Prestige
+
+Example 2:
+I have watched and liked the following movies: Titanic, The Notebook, La La Land.
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.
+→ A Walk to Remember, Me Before You, The Fault in Our Stars, About Time, Eternal Sunshine of the Spotless Mind
+
+Now for me:
+I have watched and liked the following movies: Terminator, The (1984), Being John Malkovich (1999), Finding Nemo (2003), Star Wars: Episode IV - A New Hope (1977), Rain Man (1988), Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981), Fugitive, The (1993), Babe (1995), Kill Bill: Vol. 2 (2004), Batman Begins (2005).
+Based on this, recommend 5 movies I might enjoy next. Just list the movie titles.","→ The Shawshank Redemption, Jurassic Park, The Prestige, The Incredibles, Mad Max: Fury Road"
