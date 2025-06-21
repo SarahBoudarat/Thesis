@@ -1,0 +1,15 @@
+ 1M_Top5 | zero-shot: Gini = 0.3227, ItemCV = 0.0869
+ 1M_Top5 | few-shot: Gini = 0.2289, ItemCV = 0.0974
+ 1M_Top5 | chain-of-thought: Gini = 0.4768, ItemCV = 0.0534
+ 1M_Top3 | zero-shot: Gini = 0.2683, ItemCV = 0.058
+ 1M_Top3 | few-shot: Gini = 0.1705, ItemCV = 0.0648
+ 1M_Top3 | chain-of-thought: Gini = 0.381, ItemCV = 0.044
+ 100K_Top5 | zero-shot: Gini = 0.4835, ItemCV = 0.0569
+ 100K_Top5 | few-shot: Gini = 0.3841, ItemCV = 0.0704
+ 100K_Top5 | chain-of-thought: Gini = 0.5152, ItemCV = 0.0521
+ 100K_Top3 | zero-shot: Gini = 0.42, ItemCV = 0.041
+ 100K_Top3 | few-shot: Gini = 0.322, ItemCV = 0.0488
+ 100K_Top3 | chain-of-thought: Gini = 0.4327, ItemCV = 0.0407
+
+ Diversity metrics saved to Excel:
+C:\Users\sarah.boudarat\PycharmProjects\Thesis\cold-start-diversity_summary.xlsx

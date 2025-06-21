@@ -1,0 +1,15 @@
+ 1M_Top5 | zero-shot: Gini = 0.4419, ItemCV = 0.0553
+ 1M_Top5 | few-shot: Gini = 0.4313, ItemCV = 0.0561
+ 1M_Top5 | chain-of-thought: Gini = 0.4359, ItemCV = 0.0631
+ 1M_Top3 | zero-shot: Gini = 0.4072, ItemCV = 0.041
+ 1M_Top3 | few-shot: Gini = 0.4328, ItemCV = 0.034
+ 1M_Top3 | chain-of-thought: Gini = 0.3669, ItemCV = 0.0472
+ 100K_Top5 | zero-shot: Gini = 0.4367, ItemCV = 0.061
+ 100K_Top5 | few-shot: Gini = 0.3471, ItemCV = 0.0766
+ 100K_Top5 | chain-of-thought: Gini = 0.5422, ItemCV = 0.0464
+ 100K_Top3 | zero-shot: Gini = 0.4018, ItemCV = 0.0394
+ 100K_Top3 | few-shot: Gini = 0.3176, ItemCV = 0.0502
+ 100K_Top3 | chain-of-thought: Gini = 0.4029, ItemCV = 0.044
+
+ Diversity metrics saved to Excel:
+C:\Users\sarah.boudarat\PycharmProjects\Thesis\diversity_summary.xlsx
