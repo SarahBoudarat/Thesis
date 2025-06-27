@@ -10,7 +10,7 @@ from sentence_transformers import SentenceTransformer
 # -----------------------------
 # SETUP
 # -----------------------------
-client = openai.OpenAI(api_key="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")
+client = openai.OpenAI(api_key="")
 model = SentenceTransformer("all-MiniLM-L6-v2")
 model_name = "gpt-4"
 prompt_type = "zero-shot"
@@ -31,7 +31,7 @@ test_data_10 = data["test_data_10"]
 movies = data["movies"]
 
 # -----------------------------
-# STEP 2: Zero-Shot Prompting (10 users only)
+# STEP 2: Zero-Shot Prompting
 # -----------------------------
 recommendations = {}
 prompt_logs = []
