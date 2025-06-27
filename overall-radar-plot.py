@@ -89,7 +89,7 @@ def plot_radar(metrics, scores_dict, plot_title, plot_path):
     print(f"Radar plot saved to {plot_path}")
 
 
-# ---- CALL THE FUNCTION IN A LOOP (THIS IS WHAT WAS MISSING!) ----
+# call the function
 
 metrics_top5 = ["Hit@5", "Precision@5", "Recall@5", "NDCG@5"]
 radar_settings = [
