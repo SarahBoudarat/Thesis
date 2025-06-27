@@ -3,13 +3,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # -----------------------------
-# Load Results from CSVs
+# Load results from CSVs
 # -----------------------------
-# Zero-Shot
+# Zero-shot
 zero_shot = pd.read_csv("experiments/cold_start_zero_shot/user_level_metrics_4.csv")
 zero_shot["Prompting Strategy"] = "Zero-Shot"
 
-# Few-Shot
+# Few-shot
 few_shot = pd.read_csv("experiments/cold_start_few_shot/user_level_metrics_4.csv")
 few_shot["Prompting Strategy"] = "Few-Shot"
 
