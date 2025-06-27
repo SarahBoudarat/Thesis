@@ -3,7 +3,7 @@ from openpyxl import load_workbook
 from openpyxl.styles import Font, Alignment
 from openpyxl.utils import get_column_letter
 
-# Load the existing Excel file you just created
+# Load the existing Excel file I just created
 file_path = r"C:/Users/sarah.boudarat/PycharmProjects/Thesis/summary_metrics_only.xlsx"
 wb = load_workbook(file_path)
 
