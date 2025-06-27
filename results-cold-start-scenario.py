@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-# Define paths
+# paths
 metric_paths = {
     "1M_Top5": {
         "zero-shot": r"C:\Users\sarah.boudarat\PycharmProjects\Thesis\.venv\experiment_logs\movielens1m\cold_start_zero_shot\user_level_metrics_4.csv",
