@@ -9,7 +9,7 @@ import openai
 # -----------------------------
 # SETUP
 # -----------------------------
-client = openai.OpenAI(api_key="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")
+client = openai.OpenAI(api_key="")
 model_name = "gpt-4"
 prompt_type = "cold_start_few_shot"
 output_dir = os.path.join("experiments", prompt_type)
