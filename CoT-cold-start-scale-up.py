@@ -8,18 +8,17 @@ import re
 from collections import defaultdict
 import openai
 
-# -----------------------------
-# SETUP
-# -----------------------------
-client = openai.OpenAI(api_key="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")
+
+# setup
+
+client = openai.OpenAI(api_key=)
 model_name = "gpt-4-turbo"
 prompt_type = "cold_start_chain_of_thought"
 output_dir = os.path.join("experiment_logs", "scaleup", prompt_type)
 os.makedirs(output_dir, exist_ok=True)
 
-# -----------------------------
-# LOAD DATA
-# -----------------------------
+# data load
+
 with open("experiment_logs/scaleup/data_for_100_users.pkl", "rb") as f:
     data = pickle.load(f)
 
@@ -28,9 +27,9 @@ train_data_100 = data["train_data_100"]
 test_data_100 = data["test_data_100"]
 movies = data["movies"]
 
-# -----------------------------
-# NORMALIZATION FUNCTION
-# -----------------------------
+
+# normalization function
+
 def normalize(title):
     title = re.sub(r'\(\d{4}\)', '', title)
     title = title.lower()
@@ -41,17 +40,17 @@ def normalize(title):
 movies["clean_title"] = movies["title"].str.replace(r"\s\(\d{4}\)", "", regex=True)
 known_titles = set(movies["clean_title"].apply(normalize))
 
-# -----------------------------
+
 # SELECT TOP 3 HIGHLY RATED MOVIES PER USER (COLD START)
-# -----------------------------
+
 top_k = 3
 high_rated = train_data_100[train_data_100["rating"] >= 4]
 topk_per_user = high_rated.sort_values(by=["userId", "rating"], ascending=[True, False]).groupby("userId").head(top_k)
 top_movies_per_user = topk_per_user.groupby("userId")["title"].apply(list).reset_index()
 
-# -----------------------------
+
 # BUILD CHAIN-OF-THOUGHT PROMPT
-# -----------------------------
+
 def construct_cot_prompt(user_movies, user_id):
     liked_lines = "\n".join(f"- {title}" for title in user_movies)
     prompt = (
@@ -74,9 +73,7 @@ def construct_cot_prompt(user_movies, user_id):
 
 
 
-# -----------------------------
-# GPT CALLS
-# -----------------------------
+# gpt 
 recommendations = {}
 prompt_logs = []
 
@@ -108,7 +105,7 @@ for _, row in top_movies_per_user.iterrows():
     except Exception as e:
         print(f"Error for user {user_id}: {e}")
 
-# Save prompt logs
+# save prompt logs
 pd.DataFrame(prompt_logs).to_csv(f"{output_dir}/prompt_log_100.csv", index=False)
 
 # Save raw recommendations
@@ -118,9 +115,8 @@ pd.DataFrame([
     for i, title in enumerate(recs)
 ]).to_csv(f"{output_dir}/raw_recommendations_100.csv", index=False)
 
-# -----------------------------
-# EVALUATION
-# -----------------------------
+# Evaluate
+
 recommendation_analysis = []
 evaluation_results = defaultdict(dict)
 
@@ -162,11 +158,11 @@ for user_id, recs in recommendations.items():
             "test_titles_clean": "; ".join(test_titles_clean)
         })
 
-# Save evaluation logs
+# save evaluation logs/ I have to check again the logs
 pd.DataFrame.from_dict(evaluation_results, orient="index").reset_index().rename(columns={"index": "user_id"}).to_csv(f"{output_dir}/user_level_metrics_100.csv", index=False)
 pd.DataFrame(recommendation_analysis).to_csv(f"{output_dir}/recommendation_analysis_100.csv", index=False)
 
-# Print summary
+# print summary
 print("\nAverage Evaluation Metrics (CoT Cold Start - Scale Up):")
 for metric in ["Hit@5", "Precision@5", "Recall@5", "NDCG@5", "InDataset@5"]:
     scores = [res[metric] for res in evaluation_results.values()]
