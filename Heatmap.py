@@ -87,7 +87,7 @@ def collect_diffs(compare_A, compare_B):
         columns=["Setup"] + get_metric_columns("Top5")
     ).set_index("Setup")
 
-# --- Run for each comparison you care about ---
+# --- Run for each comparison ---
 
 comparisons = [
     ("Zero-Shot", "Few-Shot", "Few-Shot minus Zero-Shot"),
