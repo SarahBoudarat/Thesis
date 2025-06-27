@@ -75,7 +75,7 @@ train_data_10 = data["train_data_10"]
 test_data_10 = data["test_data_10"]
 movies = data["movies"]
 
-client = openai.OpenAI(api_key="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")
+client = openai.OpenAI(api_key="")
 recommendations_one_shot = {}
 
 for user_id in sampled_users_10:
