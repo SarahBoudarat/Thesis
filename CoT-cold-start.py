@@ -8,25 +8,24 @@ from sentence_transformers import SentenceTransformer, util
 import openai
 import re
 
-# -----------------------------
-# SETUP
-# -----------------------------
-client = openai.OpenAI(api_key="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")
+
+# setup
+
+client = openai.OpenAI(api_key="")
 model = SentenceTransformer("all-MiniLM-L6-v2")
 output_dir = os.path.join("experiments", "cold_start_chain_of_thought")
 os.makedirs(output_dir, exist_ok=True)
 
-# -----------------------------
+
 # FUNCTION: Load Data
-# -----------------------------
+
 def load_data(pkl_path="data_for_10_users.pkl"):
     with open(pkl_path, "rb") as f:
         data = pickle.load(f)
     return data
 
-# -----------------------------
 # FUNCTION: Get Top Liked Movies
-# -----------------------------
+#
 def get_top_liked_movies(train_data, top_n=3):
     top_movies = (
         train_data[train_data["rating"] >= 4]
@@ -35,9 +34,9 @@ def get_top_liked_movies(train_data, top_n=3):
     )
     return top_movies.groupby("userId")["title"].apply(list).reset_index()
 
-# -----------------------------
+
 # FUNCTION: Generate CoT Prompt
-# -----------------------------
+
 def construct_cot_prompt(user_movies):
     exemplar = (
         "User A liked:\n"
@@ -71,9 +70,8 @@ def construct_cot_prompt(user_movies):
     )
     return exemplar + user_prompt
 
-# -----------------------------
+
 # FUNCTION: Get GPT Recommendations (CoT-style)
-# -----------------------------
 def get_cot_recommendations(user_examples):
     recommendations = {}
     prompt_logs = []
@@ -102,9 +100,9 @@ def get_cot_recommendations(user_examples):
             print(f"Error for user {user_id}: {e}")
     return recommendations, prompt_logs
 
-# -----------------------------
+
 # MAIN SCRIPT
-# -----------------------------
+
 data = load_data()
 top_liked = get_top_liked_movies(data["train_data_10"], top_n=3)
 recommendations, prompt_logs = get_cot_recommendations(top_liked)
