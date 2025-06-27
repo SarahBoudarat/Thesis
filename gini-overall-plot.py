@@ -2,15 +2,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-# === File paths ===
+# File paths 
 standard_path = r"C:\Users\sarah.boudarat\PycharmProjects\Thesis\diversity_summary.xlsx"
 coldstart_path = r"C:\Users\sarah.boudarat\PycharmProjects\Thesis\cold-start-diversity_summary.xlsx"
 
-# === Load both Excel sheets ===
+#  Load both Excel sheets 
 standard_tables = pd.read_excel(standard_path, sheet_name=None)
 coldstart_tables = pd.read_excel(coldstart_path, sheet_name=None)
 
-# === Extract function ===
+# Extract function 
 def extract_records(source_dict, scenario_tag):
     records = []
     for sheet, df in source_dict.items():
@@ -24,16 +24,16 @@ def extract_records(source_dict, scenario_tag):
             })
     return records
 
-# === Combine all data ===
+#  Combine all data 
 records = extract_records(standard_tables, "Standard") + extract_records(coldstart_tables, "Cold-Start")
 df_all = pd.DataFrame(records)
 
-# === Map numeric prompt codes to strings ===
+#  Map numeric prompt codes to strings 
 label_map = {0: "Zero-Shot", 1: "Few-Shot", 2: "Chain-of-Thought"}
 df_all["Prompting Strategy"] = df_all["Prompting Strategy"].map(label_map)
 df_all = df_all.dropna(subset=["Prompting Strategy"])  # Ensure clean labels
 
-# === Plotting function ===
+#  Plotting function 
 def plot_line(df, metric, title, save_path):
     plt.figure(figsize=(12, 6))
     for prompt in df["Prompting Strategy"].unique():
