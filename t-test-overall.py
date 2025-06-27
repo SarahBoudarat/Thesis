@@ -2,7 +2,7 @@ import pandas as pd
 import os
 from scipy.stats import ttest_rel
 
-# Define paths
+# paths
 metric_paths = {
     "1M_Top5": {
         "zero-shot": r"C:\Users\sarah.boudarat\PycharmProjects\Thesis\.venv\experiment_logs\movielens1m\zero-shot\user_level_metrics_4.csv",
