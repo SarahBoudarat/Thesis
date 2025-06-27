@@ -2,7 +2,7 @@ import pandas as pd
 from scipy.stats import ttest_rel
 
 # -----------------------------
-# File Paths (Update if Needed)
+# File Paths 
 # -----------------------------
 zero_shot_path = r"C:\Users\sarah.boudarat\PycharmProjects\Thesis\.venv\experiment_logs\movielens1m\cold_start_zero_shot_top3\user_level_metrics_4_top3.csv"
 few_shot_path = r"C:\Users\sarah.boudarat\PycharmProjects\Thesis\.venv\experiment_logs\movielens1m\cold_start_few_shot_top3\user_level_metrics_4_top3.csv"
