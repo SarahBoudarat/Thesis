@@ -11,19 +11,19 @@ import unicodedata
 from collections import defaultdict
 from rapidfuzz import process, fuzz
 
-# -----------------------------
+
 # SETUP
-# -----------------------------
+
 prompt_type = "chain_of_thought"
 model_name = "gpt-4"
 output_dir = os.path.join("experiments", prompt_type)
 os.makedirs(output_dir, exist_ok=True)
 
-client = openai.OpenAI(api_key="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")
+client = openai.OpenAI(api_key="")
 
-# -----------------------------
+
 # STEP 1: Load Data
-# -----------------------------
+
 with open("data_for_10_users.pkl", "rb") as f:
     data = pickle.load(f)
 
@@ -32,9 +32,9 @@ train_data_10 = data["train_data_10"]
 test_data_10 = data["test_data_10"]
 movies = data["movies"]
 
-# -----------------------------
+
 # CLEANING & NORMALIZATION
-# -----------------------------
+
 def normalize(title):
     title = re.sub(r"\(\d{4}\)", '', title)
     title = unicodedata.normalize('NFKD', title).encode('ASCII', 'ignore').decode('utf-8')
@@ -48,9 +48,9 @@ def normalize(title):
 movies["clean_title"] = movies["title"].str.replace(r"\(\d{4}\)", "", regex=True).str.strip()
 known_titles = set(movies["clean_title"])
 
-# -----------------------------
+
 # PROMPTING
-# -----------------------------
+
 def parse_recommendations(text):
     lines = text.splitlines()
     recs = []
@@ -120,9 +120,9 @@ pd.DataFrame([
     for i, title in enumerate(recs)
 ]).to_csv(f"{output_dir}/raw_recommendations_4.csv", index=False)
 
-# -----------------------------
+
 # EVALUATION
-# -----------------------------
+
 evaluation_results = defaultdict(dict)
 rows_for_csv = []
 
