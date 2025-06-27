@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-# Load your Excel with Gini and ItemCV
+# Load Excel with Gini and ItemCV
 diversity_summary_path = r"C:\Users\sarah.boudarat\PycharmProjects\Thesis\diversity_summary.xlsx"
 diversity_tables = pd.read_excel(diversity_summary_path, sheet_name=None)  # dict of dfs per sheet
 
