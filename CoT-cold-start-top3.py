@@ -6,18 +6,18 @@ import re
 from collections import defaultdict
 import openai
 
-# -----------------------------
-# SETUP
-# -----------------------------
-client = openai.OpenAI(api_key="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")
+
+# setup
+
+client = openai.OpenAI(api_key=)
 model_name = "gpt-4-turbo"
 prompt_type = "cold_start_chain_of_thought_top3"
 output_dir = os.path.join("experiment_logs", "scaleup", prompt_type)
 os.makedirs(output_dir, exist_ok=True)
 
-# -----------------------------
-# LOAD DATA
-# -----------------------------
+
+# data loading
+
 with open("experiment_logs/scaleup/data_for_100_users.pkl", "rb") as f:
     data = pickle.load(f)
 
@@ -26,9 +26,9 @@ train_data = data["train_data_100"]
 test_data = data["test_data_100"]
 movies = data["movies"]
 
-# -----------------------------
+
 # NORMALIZATION FUNCTION
-# -----------------------------
+
 def normalize(title):
     title = re.sub(r'\(\d{4}\)', '', title)
     title = title.lower()
@@ -39,16 +39,16 @@ def normalize(title):
 movies["clean_title"] = movies["title"].str.replace(r"\s\(\d{4}\)", "", regex=True)
 known_titles = set(movies["clean_title"].apply(normalize))
 
-# -----------------------------
+
 # SELECT TOP 3 HIGHLY RATED MOVIES PER USER (COLD START)
-# -----------------------------
+
 high_rated = train_data[train_data["rating"] >= 4]
 topk_per_user = high_rated.sort_values(by=["userId", "rating"], ascending=[True, False]).groupby("userId").head(3)
 top_movies_per_user = topk_per_user.groupby("userId")["title"].apply(list).reset_index()
 
-# -----------------------------
+
 # CHAIN-OF-THOUGHT PROMPT
-# -----------------------------
+
 def construct_cot_prompt(user_movies, user_id):
     liked_lines = "\n".join(f"- {title}" for title in user_movies)
     prompt = (
@@ -70,9 +70,9 @@ def construct_cot_prompt(user_movies, user_id):
     return prompt
 
 
-# -----------------------------
+
 # GPT CALLS
-# -----------------------------
+
 recommendations = {}
 prompt_logs = []
 
@@ -115,9 +115,9 @@ pd.DataFrame([
     for i, title in enumerate(recs)
 ]).to_csv(f"{output_dir}/raw_recommendations_4_top3.csv", index=False)
 
-# -----------------------------
+
 # EVALUATION
-# -----------------------------
+
 recommendation_analysis = []
 evaluation_results = defaultdict(dict)
 
