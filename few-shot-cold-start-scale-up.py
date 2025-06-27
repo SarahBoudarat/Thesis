@@ -9,14 +9,14 @@ import openai
 # -----------------------------
 # SETUP
 # -----------------------------
-client = openai.OpenAI(api_key="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")
+client = openai.OpenAI(api_key="")
 model_name = "gpt-4-turbo"
 prompt_type = "cold_start_few_shot"
 output_dir = os.path.join("experiment_logs", "scaleup", prompt_type)
 os.makedirs(output_dir, exist_ok=True)
 
 # -----------------------------
-# LOAD DATA (10 users or 100 users)
+# LOAD DATA 
 # -----------------------------
 with open("experiment_logs/scaleup/data_for_100_users.pkl", "rb") as f:
     data = pickle.load(f)
