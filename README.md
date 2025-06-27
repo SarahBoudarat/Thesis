@@ -12,8 +12,10 @@ This repository contains all code and scripts used for the thesis experiments on
 
 ## Data
 
-Download the MovieLens 100K or 1M datasets from [https://grouplens.org/datasets/movielens/](https://grouplens.org/datasets/movielens/).  
-Data files are not included due to licensing.
+The MovieLens datasets are **not** included in this repository due to licensing.  
+You can obtain the datasets directly from [https://grouplens.org/datasets/movielens/](https://grouplens.org/datasets/movielens/).
+
+Data loading scripts for both MovieLens 100K (`.csv` format) and MovieLens 1M (`.dat` format) are provided in this repository to facilitate preprocessing and experimentation.
 
 ## API credentials
 
